@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--Slate300);
+}
+:root{
+    --Lime: hsl(61, 70%, 52%);
+    --Red: hsl(4, 69%, 50%);
+    --White: hsl(0, 0%, 100%);
+    --Slate100: hsl(202, 86%, 94%);
+    --Slate300: hsl(203, 41%, 72%);
+    --Slate500: hsl(200, 26%, 54%);
+    --Slate700: hsl(200, 24%, 40%);
+    --Slate900: hsl(202, 55%, 16%);
+}
+main .container{
+    margin: 100px 200px;
+}
+main .container .mortgage-Calculator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+main .container .mortgage-Calculator  .calculator{
+    height: auto;
+    width: 400px;
+    background-color: var(--White);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px;
+}
+/* --------------------------------- */
+main .container .mortgage-Calculator  .calculator .mortage-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .container .mortgage-Calculator  .calculator .mortage-head h1{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    font-size: 25px;
+}
+main .container .mortgage-Calculator  .calculator .mortage-head .clear{
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* ------------------------------------------------------ */
+main .container .mortgage-Calculator  .calculator form .mortage-amount{
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction: column;
+    margin-top: 30px;
+}
+main .container .mortgage-Calculator  .calculator form .mortage-amount .lb-amount{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    margin: 10px 0;
+}
+main .container .mortgage-Calculator  .calculator form .mortage-amount .£{
+    position: absolute;
+    top: 42px;
+    left: 1px;
+    width: 35px;
+    height: 37px;
+    background-color: var(--Slate300);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    text-align: center;
+    line-height: 37px;
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+main .container .mortgage-Calculator  .calculator form .mortage-amount .amount{
+    padding: 10px 40px;
+    font-family:"Plus Jakarta Sans";
+    font-weight: 700;
+    border-radius: 5px;
+    width: 360px;
+    border: none;
+    outline: none;
+    border: 1px solid  var(--Slate700);
+    transition: all 0.6s;
+    cursor: pointer;
+}
+main .container .mortgage-Calculator  .calculator form .mortage-amount .amount:hover{
+    border-color: var(--Lime);
+}
+main .container .mortgage-Calculator  .calculator form .mortage-amount:hover .£{
+    background-color: var(--Lime);
+}
+main .container .mortgage-Calculator  .calculator form .mortage-amount .error-amount{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    color: var(--Red);
+    margin: 10px 0;
+    font-size: 12px;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+}
+/* -------------------------------------------------------------- */
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-term{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-term .lb-term{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-term .lb-term.active{
+    background-color: var(--Lime);
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-term .years{
+    position: absolute;
+    top: 42px;
+    right:1px;
+    width: 50px;
+    height: 37px;
+    background-color: var(--Slate300);
+    text-align: center;
+    line-height: 37px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all 0.6s;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-term  .term{
+    padding: 10px 0px;
+    font-family:"Plus Jakarta Sans";
+    font-weight: 700;
+    border-radius: 5px;
+    width: 150px;
+    border: none;
+    outline: none;
+    border: 1px solid  var(--Slate700);
+    transition: all 0.6s;
+    cursor: pointer;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-term .term:hover{
+    border-color: var(--Lime);
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-term:hover .years{
+    background-color: var(--Lime);
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-term .error-term{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    color: var(--Red);
+    margin: 10px 0;
+    font-size: 12px;
+}
+/* ------------------------------------------------ */
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-rate{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-rate .lb-rate{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-rate:hover .intere{
+    background-color: var(--Lime);
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-rate .intere{
+    position: absolute;
+    top: 42px;
+    right:1px;
+    width: 50px;
+    height: 37px;
+    background-color: var(--Slate300);
+    text-align: center;
+    line-height: 37px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all 0.6s;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-rate .rate{
+    padding: 10px 0px;
+    font-family:"Plus Jakarta Sans";
+    font-weight: 700;
+    border-radius: 5px;
+    width: 150px;
+    border: none;
+    outline: none;
+    border: 1px solid  var(--Slate700);
+    transition: all 0.6s;
+    cursor: pointer;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-rate .rate:hover{
+    border-color: var(--Lime);
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-term-rate .mo-rate .error-rate{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    color: var(--Red);
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+/* ----------------------------------------------- */
+main .container .mortgage-Calculator  .calculator form  .mortage-type{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-type .mo-ty-lb{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-type .repayt{
+    border: 1px solid var(--Slate300);
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-type .repayt #repayment{
+    accent-color: var(--Lime);
+    margin: 0 10px 0 10px;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-type .repayt.active{
+    background-color: var(--Lime);
+    border-color: var(--Lime);
+}
+/* -------------------- */
+main .container .mortgage-Calculator  .calculator form  .mortage-type .inter{
+    border: 1px solid var(--Slate300);
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-type .inter.active{
+    background-color: var(--Lime);
+    border-color: var(--Lime);
+}
+main .container .mortgage-Calculator  .calculator form  .mortage-type .inter #interest-only{
+    accent-color: var(--Lime);
+    margin: 0 10px 0 10px;
+}
+/* ---------------------------- */
+main .container .mortgage-Calculator  .calculator form .cal{
+    padding: 10px 0;
+    border-radius: 20px;
+    background-color: var(--Lime);
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    width: 100%;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+main .container .mortgage-Calculator  .calculator form .cal:hover{
+    background-color:hsla(61, 70%, 52%, 0.753) ;
+}
+/* -------------------------------------- */
+main .container .mortgage-Calculator .result {
+    position: relative;
+    background-color: var(--White);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 100px;
+}
+main .container .mortgage-Calculator .result .result-shown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--Slate900);
+    height: 563px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 100px;
+}
+main .container .mortgage-Calculator .result .result-shown h2{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 700;
+    color: var(--White);
+}
+main .container .mortgage-Calculator .result .result-shown p{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    text-align: center;
+    font-size: 16px;
+    color: var(--Slate500);
+    margin: 0 55px;
+}
+/* ----------------------- */
+main .container .mortgage-Calculator .result .your-result{
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--Slate900);
+    height: 563px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 100px;
+    padding: 40px 40px 0 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+main .container .mortgage-Calculator .result .your-result h3{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 700;
+    color: var(--White);
+}
+main .container .mortgage-Calculator .result .your-result p{
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--Slate500);
+    margin: 0 55px 0 0;
+}
+main .container .mortgage-Calculator .result .your-result .your-reypay{
+    background-color: hsl(201, 58%, 5%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border-top: 5px solid var(--Lime);
+    width: 420px;
+    height: 300px;
+}
+main .container .mortgage-Calculator .result .your-result .your-reypay .your-re-mo{
+    display: block;
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    margin: 30px 0 10px 30px;
+    cursor: pointer;
+    transition: all 0.6s;
+    color: var(--Slate300);
+}
+main .container .mortgage-Calculator .result .your-result .your-reypay .repayment-monthe{
+    display: block;
+    font-family:"Plus Jakarta Sans";
+    font-weight: 700;
+    font-size: 50px;
+    color: var(--Lime);
+    margin: 10px 0 10px 30px;
+    padding-bottom: 20px;
+    width: 80%;
+    border-bottom: 1px solid var(--Slate100);
+}
+main .container .mortgage-Calculator .result .your-result .your-reypay  .your-total-repay{
+    display: block;
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
+    margin: 10px 0 10px 30px;
+    cursor: pointer;
+    transition: all 0.6s;
+    color: var(--Slate300);
+}
+main .container .mortgage-Calculator .result .your-result .your-reypay .repayment-total{
+    display: block;
+    font-family:"Plus Jakarta Sans";
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--White);
+    margin: 10px 0 10px 30px;
+}
+/* ----------------------media-query------------------------ */
+@media(max-width:1024px){
+    main .container {
+        margin: 100px 100px;
+      }
+      main .container .mortgage-Calculator .result .your-result {
+        left: 0;
+      }
+      main .container .mortgage-Calculator .result .your-result p {
+        margin: 0 0px 0 0;
+      }
+      main .container .mortgage-Calculator .result .your-result .your-reypay {
+        width: 335px;
+      }
+}
+@media(max-width:768px){
+    main .container .mortgage-Calculator {
+        flex-direction: column;
+        border-bottom-left-radius: 100px;
+      }
+      main .container .mortgage-Calculator .result .your-result .your-reypay {
+        width: 489px;
+      }
+}
+@media(max-width:480px){
+    main .container .mortgage-Calculator .calculator {
+        border-bottom-left-radius: 0px;
+      }
+    main .container .mortgage-Calculator .result .result-shown {
+        border-top-right-radius: 0px;
+        width: 400px;
+      }
+      main .container .mortgage-Calculator .result .your-result .your-reypay {
+        width: 310px;
+      }
+}
+@media(max-width:375px){
+    main .container .mortgage-Calculator .calculator .mortage-head h1 {
+        font-size: 20px;
+      }
+    main .container .mortgage-Calculator .calculator {
+        border-bottom-left-radius: 0px;
+      }
+    main .container .mortgage-Calculator .calculator {
+      width: 330px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius:0px;
+    }
+    main .container .mortgage-Calculator .calculator form .mortage-amount .amount {
+        width: 280px;
+      }
+      main .container .mortgage-Calculator .calculator form .mortage-term-rate {
+        gap: 25px;
+      }
+      main .container .mortgage-Calculator .calculator form .mortage-term-rate .mo-term .term {
+        width: 130px;
+      }
+      main .container .mortgage-Calculator .calculator form .mortage-term-rate .mo-rate .rate {
+        width: 130px;
+      }
+      main .container .mortgage-Calculator .result .result-shown {
+        width: 330px;
+      }
+      main .container .mortgage-Calculator .result .your-result{
+        width: 330px;
+      }
+      main .container .mortgage-Calculator .result .your-result .your-reypay {
+        width: 270px;
+      }
+}
+@media(max-width:320px){
+    main .container .mortgage-Calculator .calculator {
+        width: 300px;
+      }
+      main .container .mortgage-Calculator .calculator .mortage-head h1 {
+        font-size: 18px;
+      }
+      main .container .mortgage-Calculator .calculator form .mortage-amount .amount {
+        width: 265px;
+      }
+      main .container .mortgage-Calculator .calculator form .mortage-term-rate .mo-term .term {
+        width: 120px;
+      }
+      main .container .mortgage-Calculator .calculator form .mortage-term-rate .mo-rate .rate {
+        width: 120px;
+      }
+      main .container .mortgage-Calculator .result .result-shown {
+        width: 300px;
+      }
+      main .container .mortgage-Calculator .result .result-shown p {
+        margin: 0 5px;
+      }
+      main .container .mortgage-Calculator .result .your-result {
+        width: 300px;
+      }
+      main .container .mortgage-Calculator .result .your-result .your-reypay {
+        width: 240px;
+      }
+      main .container .mortgage-Calculator .result .your-result .your-reypay .repayment-monthe {
+        font-size: 40px;
+      }
+}
+@media(max-width:240px){
+    main .container .mortgage-Calculator .calculator {
+        width: 220px;
+      }
+      main .container .mortgage-Calculator .calculator .mortage-head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+      main .container .mortgage-Calculator .calculator form .mortage-amount .amount {
+        width: 190px;
+      }
+      main .container .mortgage-Calculator .calculator form .mortage-term-rate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        flex-direction: column;
+      }
+      main .container .mortgage-Calculator .result .result-shown {
+        width: 220px;
+      }
+      main .container .mortgage-Calculator .result .result-shown h2 {
+        font-size: 20px;
+      }
+      main .container .mortgage-Calculator .result .your-result {
+        width: 220px;
+        height: 647px;
+      }
+      main .container .mortgage-Calculator .result .your-result .your-reypay {
+        width: 170px;
+      }
+      main .container .mortgage-Calculator .result .your-result .your-reypay .repayment-monthe {
+        font-size: 29px;
+      }
+}

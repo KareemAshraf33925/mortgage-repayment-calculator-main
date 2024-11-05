@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mortgage-repayment-calculator-main</title>
+    <!-- link_css -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- start-Mortgage Calculator -->
+     <main>
+        <div class="container">
+            <div class="mortgage-Calculator">
+                <div class="calculator">
+                <div class="mortage-head">
+                    <h1>Mortgage Calculator</h1>
+                    <span class="clear"> Clear All</span>
+                </div>
+                <form class="form">
+                    <div class="mortage-amount">
+                    <label class="lb-amount">Mortgage Amount</label>
+                    <span class="£">£</span>
+                    <input type="text" class="amount">
+                    <span class="error-amount"></span>
+                    </div>
+                    <div class="mortage-term-rate">
+                        <div class="mo-term">
+                    <label class="lb-term"> Mortgage Term</label>
+                    <span class="years">years</span>
+                    <input type="text" class="term">
+                    <span class="error-term"></span>
+                        </div>
+                        <div class="mo-rate">
+                            <label class="lb-rate">Interest Rate </label>
+                            <span class="intere">%</span>
+                            <input type="text" class="rate">
+                            <span class="error-rate"></span>
+                                </div>
+                    </div>
+                    <div class="mortage-type">
+                        <label class="mo-ty-lb">Mortgage Type</label>
+                        <div class="repayt" id="repayt">
+                            <input type="radio" name='repaymentType' value="repayment" id="repayment" >
+                            <label for="repayment" class="lb-rape">Repayment</label>
+                        </div>
+                        <div class="inter" id="inter">
+                            <input type="radio" name='repaymentType' value="interest-only" id="interest-only">
+                            <label for="repayment" class="lb-inter">Interest Only</label>
+                        </div>
+                    </div>
+                   <button class="cal"><img src="assets/images/icon-calculator.svg" alt="icon-calculator">Calculate Repayments</button>
+                </form>
+                </div>
+                <div class="result">
+                    <div class="result-shown">
+                        <img src="assets/images/illustration-empty.svg" alt="illustration-empty" class="illustration-empty">
+                        <h2>Results shown here</h2>
+                        <p> Complete the form and click “calculate repayments” to see what 
+                            your monthly repayments would be.</p>
+                    </div>
+                    <div class="your-result">
+                        <h3>Your results</h3>
+                        <p> Your results are shown below based on the information you provided. 
+                            To adjust the results, edit the form and click “calculate repayments” again.</p>
+                            <div class="your-reypay">
+                                <label class="your-re-mo"> Your monthly repayments</label>
+                                <span class="repayment-monthe">£1,7777.1</span>
+                                <label class="your-total-repay">Total you'll repay over the term </label>
+                                <span class="repayment-total">£1,7777.1</span>
+                            </div>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+     </main>
+     <!-- end-Mortgage Calculator -->
+    
+    <!-- script_link -->
+    <script src="javascript.js"></script>
+</body>
+</html>
+  <!-- Empty results start -->
+
+  <!-- 
+
+  -->
+
+  <!-- Empty results end -->
+
+  <!-- Completed results start -->
+
+  <!-- 
+
+
+ 
+
+-->
+
+  <!-- Completed results end -->
